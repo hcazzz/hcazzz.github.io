@@ -1,9 +1,9 @@
 ---
 layout: project
 type: project
-image: img/etch-a-sketch/Etch_A_Sketch_Image.jpg
-title: "Micromouse"
-date: 2015
+image: img/Etch_A_Sketch_Image.jpg
+title: "Etch-A-Sketch"
+date: 2022
 published: true
 labels:
   - Robotics
