@@ -13,9 +13,9 @@ summary: "A project I created for The Odin Project"
 ---
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/micromouse/micromouse-robot.png" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-robot-2.jpg" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-circuit.png" class="img-thumbnail" >
+  <img width="200px" src="../img/etchASketchGif.gif" class="img-thumbnail" >
+  
+ 
 </div>
 
 Etch-A-Sketch is a mechanical drawing toy where you twist two knobs and you can make an image in black and white. This project was created to mimic a digital version of that game.
