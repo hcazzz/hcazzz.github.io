@@ -24,3 +24,5 @@ labels:
 ## Balancing Approaches: Fast-Paced Learning vs. Comprehensive Courses
 
   With all that being said, I think it’s cool to take this approach when learning javascript. When learning to code many people don’t get to learn in this way. It’s usually random youtube tutorial projects or online courses such as Udemy or maybe The Odin Project where you have months to learn how to code. But these approaches don't prepare you for the times where you have to code at a fast pace. If you happen to be someone wanting to work in a fast paced environment such as a startup or just doing a hackathon, not being able to work quickly can hinder your team and maybe your skills as a programmer. However, I wouldn’t say one style is better than the other. Both approaches are valid and it would be smart to utilize athletic software engineering and long courses that build upon your skills.
+
+ <img width="250" height="250" src="../img/funny_js.jpg" class="img-thumbnail" >
