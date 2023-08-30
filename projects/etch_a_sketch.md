@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/Etch_A_Sketch_Image.png
+image: img/etchASketchImagine.png
 title: "Etch-A-Sketch"
 date: 2022
 published: true
