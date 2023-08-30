@@ -13,7 +13,7 @@ summary: "A project I created for The Odin Project"
 ---
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/etchASketchGif.gif" class="img-thumbnail" >
+  <img width="500px" height="500px" src="../img/etchASketchGif.gif" class="img-thumbnail" >
   
  
 </div>
