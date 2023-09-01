@@ -10,7 +10,7 @@
   --number: #d19a66;
   --function: #61afef;
   --variable: #e06c75;
-  --tf-pill-bg: var(#61afef);
+  --tf-pill-bg: #61afef;
 }
 
 body {
