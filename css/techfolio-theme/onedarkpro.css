@@ -3,7 +3,7 @@
 
 :root {
   --background: #282c34;
-  --foreground: var(--lightgray);
+  --foreground: #abb2bf;
   --comment: #5c6370;
   --keyword: #c678dd;
   --string: #98c379;
