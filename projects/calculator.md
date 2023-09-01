@@ -26,7 +26,7 @@ In order to get the correct value when pressing a button I used the HTML data-ty
 ```
 Here is an example of the data-type attribute. For the number buttons I stored the corresponding number for the button and for the operator buttons I stored the symbol, in this case the "+" symbol. 
 
-To utilize these attributes I used the following javascript code
+To utilize these attributes I used the following javascript code.
 ```javascript
 for (const button of buttons) {
   button.addEventListener('click', () => {
