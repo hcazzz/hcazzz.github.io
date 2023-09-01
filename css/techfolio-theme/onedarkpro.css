@@ -84,6 +84,9 @@ pre.highlight {
 .hightlight span.p {
   color: #c678dd;
 }
+.highlight span.nt {
+  color: #ff6b6b;
+}
 .text-muted float-end {
   color: var(--foreground);
 }
