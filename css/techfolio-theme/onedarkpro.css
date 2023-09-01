@@ -69,7 +69,10 @@ pre.highlight {
 }
 
 .highlight span.kd {
-   color: green; 
+   color: #c678dd; 
+}
+.highlight span.nx {
+  color: #61afef;
 }
 
 .highlight .s1 {
