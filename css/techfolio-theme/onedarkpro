@@ -1,15 +1,15 @@
-/* VSCode Vitesse theme adaptation */
+/* VSCode One Dark Pro theme adaptation */
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700|Source+Code+Pro:300,400,500,700");
 
 :root {
-  --background: #1E1E1E;
-  --foreground: #D4D4D4;
-  --comment: #6A9955;
-  --keyword: #569CD6;
-  --string: #CE9178;
-  --number: #B5CEA8;
-  --function: #DCDCAA;
-  --variable: #9CDCFE;
+  --background: #282c34;
+  --foreground: #abb2bf;
+  --comment: #5c6370;
+  --keyword: #c678dd;
+  --string: #98c379;
+  --number: #d19a66;
+  --function: #61afef;
+  --variable: #e06c75;
 }
 
 body {
@@ -56,11 +56,11 @@ div.card {
 }
 
 a.btn {
-  border: 1px solid var(--keyword); 
-  color: var(--keyword);
+  border: 1px solid var(--function); 
+  color: var(--function);
 }
 a.btn:hover {
-  color: var(--function);
+  color: var(--variable);
 }
 
 pre.highlight {
