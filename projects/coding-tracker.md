@@ -9,7 +9,7 @@ labels:
   - C#
   - EF Core
   - SQLite
-summary: "A simple C# console application that uses SQLite to store how long you code for"
+summary: "A simple C# console application that uses SQLite to store how long you code for."
 ---
 
 
