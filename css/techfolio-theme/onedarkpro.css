@@ -84,6 +84,9 @@ pre.highlight {
 .hightlight span.p {
   color: #c678dd;
 }
+.text-muted float-end {
+  color: var(--foreground);
+}
 
 .card-footer {
   background-color: var(--background);
