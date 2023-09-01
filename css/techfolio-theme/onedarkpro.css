@@ -68,6 +68,13 @@ pre.highlight {
   background-color: var(--background);
 }
 
+.highlight span.kd {
+   color: green; 
+}
+
+.highlight .s1 {
+  color: white;
+}
 
 
 .card-footer {
