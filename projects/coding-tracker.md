@@ -19,10 +19,10 @@ This coding tracker project is a CRUD console application developed using C# tha
 This simple project was created to learn the basics of C# and SQLite. Below are some images on what the application looks like.
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/coding-tracker/codingTimeMenu.png" class="img-thumbnail" >
-  <img width="200px" src="../img/coding-tracker/codingTimeAdd.png" class="img-thumbnail" >
-  <img width="200px" src="../img/coding-tracker/codingTimeUpdate.png" class="img-thumbnail" >
-  <img width="200px" src="../img/coding-tracker/codingTimeDisplayAll.png" class="img-thumbnail" >
+  <img width="500px" src="../img/coding-tracker/codingTimeMenu.png" class="img-thumbnail" >
+  <img width="500px" src="../img/coding-tracker/codingTimeAdd.png" class="img-thumbnail" >
+  <img width="500px" src="../img/coding-tracker/codingTimeUpdate.png" class="img-thumbnail" >
+  <img width="500px" src="../img/coding-tracker/codingTimeDisplayAll.png" class="img-thumbnail" >
 </div>
 
 
