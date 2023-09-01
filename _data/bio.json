@@ -2,10 +2,10 @@
   "basics": {
     "name": "Zachary Stoddard",
     "label": "Student",
-    "picture": "t",
+    "picture": "https://github.com/hcazzz.png",
     "email": "zstoddar@hawaii.edu",
     "phone": "808-333-4444",
-    "website": "https://hcazzz.github.io",
+    "website": "https://Hcazzz.github.io",
     "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2025.",
     "location": { "address": "", "postalCode": "96707", "city": "Kapolei", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
