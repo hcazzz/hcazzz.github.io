@@ -1,0 +1,73 @@
+/* VSCode Vitesse theme adaptation */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700|Source+Code+Pro:300,400,500,700");
+
+:root {
+  --background: #1E1E1E;
+  --foreground: #D4D4D4;
+  --comment: #6A9955;
+  --keyword: #569CD6;
+  --string: #CE9178;
+  --number: #B5CEA8;
+  --function: #DCDCAA;
+  --variable: #9CDCFE;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--keyword);
+}
+
+.tf-social {
+  display: inline-block;
+  fill: var(--keyword);
+  height: 1.5em; 
+  vertical-align: -.1em;
+  width: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--string);
+}
+
+a.md:hover {
+  color: var(--string);
+  opacity: 0.7;
+}
+
+a span {
+  color: var(--number);
+}
+a span:hover {
+  color: var(--foreground);
+}
+
+a.nav-link {
+  color: var(--comment);
+}
+
+div.card {
+  background-color: var(--background);
+  box-shadow: 3px 6px 10px var(--background);
+}
+
+a.btn {
+  border: 1px solid var(--keyword); 
+  color: var(--keyword);
+}
+a.btn:hover {
+  color: var(--function);
+}
+
+pre.highlight {
+  background-color: var(--background);
+}
+
+.card-footer {
+  background-color: var(--background);
+  border-top: none;
+}
