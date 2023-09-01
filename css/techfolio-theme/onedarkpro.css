@@ -68,9 +68,7 @@ pre.highlight {
   background-color: var(--background);
 }
 
-.highlight .nt {
-  color: #98c379;
-}
+
 
 .card-footer {
   background-color: var(--background);
