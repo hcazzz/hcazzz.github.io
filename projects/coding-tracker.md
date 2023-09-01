@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: <img width="200px" src="../img/coding-tracker/codingTracker.png">
+image: img/coding-tracker/codingTracker.png
 title: "Coding Tracker"
 date: 2023
 published: true
