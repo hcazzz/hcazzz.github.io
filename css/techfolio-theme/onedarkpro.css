@@ -75,10 +75,15 @@ pre.highlight {
   color: #61afef;
 }
 
-.highlight .s1 {
-  color: white;
+.highlight span.k {
+  color: #c678dd;
 }
-
+.highlight span.sl {
+  color: #98c379;
+}
+.hightlight span.p {
+  color: #c678dd;
+}
 
 .card-footer {
   background-color: var(--background);
