@@ -6,10 +6,10 @@ title: "Calculator"
 date: 2022
 published: true
 labels:
-  - Javascript
+  - JavaScript
   - HTML
   - CSS
-summary: "A calculator app I built for The Odin Project"
+summary: "A calculator app I built for The Odin Project."
 ---
 
 <img class="img-fluid" src="../img/calculator_app.png">
@@ -34,7 +34,4 @@ for (const button of buttons) {
   });
 }
 ```
-So everytime a button is pressed this event listener is called and it gets the buttons attribute. So if you were to press the button for the number 5, it would get the string "5".
-
-
-
+So, every time a button is pressed this event listener is called and it gets the buttons attribute. So, if you were to press the button for the number 5, it would get the string "5".
