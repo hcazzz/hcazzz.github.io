@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "Smart Questions and their Importance"
+title: "Smart Questions and Their Importance"
 # All dates must be YYYY-MM-DD format!
 date: 2023-09-06
 published: true
