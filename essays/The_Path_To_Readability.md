@@ -3,7 +3,7 @@ layout: essay
 type: essay
 title: "The Path to Readability"
 # All dates must be YYYY-MM-DD format!
-date: 2015-09-20
+date: 2023-09-20
 published: true
 labels:
   - ESLint
