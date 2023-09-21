@@ -1,3 +1,14 @@
+---
+layout: essay
+type: essay
+title: "The Path to Readability"
+# All dates must be YYYY-MM-DD format!
+date: 2015-09-20
+published: true
+labels:
+  - ESLint
+  - Coding Standards
+---
 At first, my opinion on ESLint was not that great. Going through the different intricacies of using IntelliJ and also setting up ESLint was not a great experience. Although it didn’t take longer than two hours, it still felt painful trying to get it all set up. The setup alone left a sour taste in my mouth. However, after going through the process and looking back, I think it would be very easy to set up now. With all that being said, I find ESLint very interesting to use; not only does it improve readability in my code, but it also helps me avoid potential bugs and syntax errors.
 
 One of the primary reasons for my initial frustration with ESLint was the learning curve associated with it. As a developer, I was used to writing code in my own style, and suddenly being asked to adhere to a set of predefined coding rules was a bit jarring. Understanding how ESLint enforced these different rules was a challenge, especially when your editor is screaming at you in red everytime you make a mistake. However, as I persevered and began to grasp the concept of ESLint rules and setting up the configuration files, I started to see the value in having a consistent code style across the project. It is clear to me what ESLint is trying to achieve and I think it's a very important tool to keep a code base uniform and readable.
