@@ -14,7 +14,7 @@ labels:
 
 ## Problem Solving with AI
 As of lately AI has been a game changer, things like ChatGPT have really changed the way things are done, especially in the software industry. Before ChatGPT a lot of problems had to be solved using google. Don’t get me wrong, google is definitely still viable, however, it’s much easier to ask ChatGPT for an answer especially if google comes up inconclusive. ChatGPT can also be very useful in understanding things you don't understand. For example take this code block from the Meteor Template 
-```
+```javascript
 Meteor.publish(Notes.userPublicationName, function () {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
@@ -41,3 +41,60 @@ When learning new concepts, ChatGPT is really helpful. For instance, I was strug
 Whenever I have a question about the material in this class, I always try to utilize ChatGPT first. Most of the time it is able to give me a solid understanding of what it is I don’t know. This lets me avoid having to ask a question and waiting for a response and also avoids wasting someone else’s time to help me.
 ## 8. Asking or answering a smart-question
 As stated in number 7, the same thing follows. If I have a smart-question I am able to avoid asking the question and can utilize ChatGPT.
+## 9. Coding example
+When given the prompt:
+“Give me a small code example of React UseState”
+ChatGPT outputs this: 
+“Sure, here's a simple code example of how you might use the useState hook in React:”
+```javascript
+import React, { useState } from 'react';
+
+const Counter = () => {
+  // Using useState to declare a state variable 'count' and a function 'setCount' to update it
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    // Updating the 'count' state using the 'setCount' function
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    // Updating the 'count' state using the 'setCount' function
+    setCount(count - 1);
+  };
+
+  return (
+    <div>
+      <h2>Counter</h2>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+    </div>
+  );
+};
+
+export default Counter;
+``` 
+“In this example:
+
+useState is imported from React.
+Inside the Counter component, useState is used to declare a state variable count initialized with an initial value of 0.
+setCount is a function used to update the count state.
+Two functions, increment and decrement, are defined to update the count state using setCount when the buttons are clicked.
+The value of count is displayed in the JSX using curly braces {} to render dynamic content.
+Clicking the "Increment" button increases the count, and clicking the "Decrement" button decreases it.
+This is a basic example demonstrating how useState works to manage state within a React functional component.
+“
+It gave us a simple example on how to use React useState and explained what it does.
+
+## 10. Explaining code
+From the example in number 9, you can clearly see ChatGPT explaining the code it created. This is super helpful when you want to learn something new. 
+## 11. Writing code
+From the example in number 9, you can see ChatGPT creating code. 
+## 12. Documenting code
+Just like the others, in example 9, ChatGPT is able to create comments and document code. If you need ChatGPT to document code using Java standards or any known standards it can do so with ease. You can even train ChatGPT to document code a certain way you see fit. 
+## 13. Quality assurance
+While writing code if you are not well versed with the little things, it can be easy to mess something up and write bad code. This can be partly solved using ChatGPT. ChatGPT is able to turn bad code into quality code, and it can also help you learn how to write quality code. 
+## 14. Other uses in ICS 314 not listed
+Some other uses for AI or ChatGPT is its ability to answer any type of question in almost any domain. If you have any particular question on data structures or algorithms, ChatGPT can answer it. If you need help planning an itinerary for a trip, ChatGPT can create some good suggestions. The possibilities are endless when it comes to ChatGPT, and AI in general and it can be used by anyone to solve many problems.
+
