@@ -46,7 +46,7 @@ When given the prompt:
 “Give me a small code example of React UseState”
 ChatGPT outputs this: 
 “Sure, here's a simple code example of how you might use the useState hook in React:”
-```javascript
+```markdown
 import React, { useState } from 'react';
 
 const Counter = () => {
