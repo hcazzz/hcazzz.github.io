@@ -19,7 +19,8 @@ Software Engineering can be quite daunting at first glance, and on top of this, 
 <li>Observers</li>
 <li>Dependency Injection</li>
 </ul>
-<img width="320" height="250" src="../img/design/funnypattern.jpg" class="img-thumbnail" >
+<div><img width="320" height="250" src="../img/design/funnypattern.jpg" class="img-thumbnail"></div>
+
 </div>
 
 
