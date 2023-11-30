@@ -83,7 +83,7 @@
   font-weight: bold;
 }
 .highlight .k, .highlight .kv {
-  color: #000000;
+  color: #4545c4;
   font-weight: bold;
 }
 .highlight .mf {
@@ -150,7 +150,7 @@
   color: #0086B3;
 }
 .highlight .nc {
-  color: #445588;
+  color: #4caf28;
   font-weight: bold;
 }
 .highlight .no {
@@ -168,7 +168,7 @@
   font-weight: bold;
 }
 .highlight .nf {
-  color: #990000;
+  color: #4caf28;
   font-weight: bold;
 }
 .highlight .nl {
@@ -176,7 +176,7 @@
   font-weight: bold;
 }
 .highlight .nn {
-  color: #555555;
+  color: white;
 }
 .highlight .nt {
   color: #000080;
