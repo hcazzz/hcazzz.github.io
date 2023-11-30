@@ -37,7 +37,7 @@ These are basic design principles that one may use while programming. So how do 
 
 In JavaScript, I find myself mostly using the Singleton design pattern, while at first I didn’t know it, as I learned more about design patterns I realized I am. Put it simply, the Singleton pattern is when a class in your program has a single instance but also provides global access to that instance everywhere. An example of this can be found in the <a href=“https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/api/stuff/Stuff.js”>Meteor React Template StuffsCollection</a> which is a collection of stuffs.
 
-``` JS
+```javascript
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 
@@ -85,7 +85,7 @@ This line creates a ‘Stuffs’ variable which will serve as a singleton instan
 
 React Hooks are another thing that I have used often in my applications. Hooks allow you to encapsulate and reuse code. While on its own it's not considered a design pattern, it's definitely important to note. However, when paired with other things hooks can become a design pattern. For example, let's take a look at the custom react hook ‘useTracker’. In this code snippet, again from <a href=“https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/ui/pages/EditStuff.jsx”>Meteor React Template, EditStuff</a>
 
-``` JS
+```javascript
 
 const EditStuff = () => {
 // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
@@ -112,7 +112,7 @@ When it comes to programming in C# you may come across the Repository pattern wh
 
 Enough analogies, in order to fully understand what we are talking about, its best to see an example, 
 
-```C#
+```cs
 namespace Flashcards.Data
 {
     internal class FlashcardRepository
@@ -135,7 +135,7 @@ namespace Flashcards.Data
 
 Here is a small example of a FlashcardRepository, in this example, context represents the database sessions that the class will use to interact with the database. In this sample, the repository is capable of adding a new Flashcard into the context or database, and then it saves the changes. The next question is how is this used? Well, we have a few ways to do it, to keep it simple, there would be a user interface that collects the new flashcards data, from there we can pass it to the controller, here's a simple example: 
 
-```C#
+```cs
 namespace Flashcards.Controllers
 {
     public class FlashcardController
@@ -168,7 +168,7 @@ Well, others may have their own opinion on the repository pattern, and find it c
 
 Looking at the above examples, you may notice this code: 
 
-``` C#
+```cs
     private readonly FlashcardContext _context;
 
         public FlashcardRepository(FlashcardContext context)
