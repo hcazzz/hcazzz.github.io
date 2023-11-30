@@ -167,7 +167,10 @@ So with this repository design pattern, the repository acts as HR, in the sense 
 
 ## Why is This Important?
 
-While others may have their own opinions on the repository pattern, some might find it beneficial. When done correctly, the pattern promotes readability and maintainability, scalability and testability. These are all very important things when writing good code and if used correctly it can optimize your code base. 
+
+While others may have their own opinions on the repository pattern, some might find it beneficial. When done correctly, the pattern promotes readability and maintainability, scalability and testability. These are all very important things when writing good code and if used correctly it can optimize your code base.
+
+<img width="250" height="250" src="../img/design/code-meme.jpg" class="img-thumbnail" >
 
 ## More on Design Patterns
 
