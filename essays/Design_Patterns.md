@@ -86,7 +86,6 @@ This line creates a ‘Stuffs’ variable which will serve as a singleton instan
 React Hooks are another thing that I have used often in my applications. Hooks allow you to encapsulate and reuse code. While on its own it's not considered a design pattern, it's definitely important to note. However, when paired with other things hooks can become a design pattern. For example, let's take a look at the custom react hook ‘useTracker’. In this code snippet, again from <a href=“https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/ui/pages/EditStuff.jsx”>Meteor React Template, EditStuff</a>
 
 ```javascript
-
 const EditStuff = () => {
 // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
 const { _id } = useParams();
