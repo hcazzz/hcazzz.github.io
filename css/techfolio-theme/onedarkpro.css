@@ -96,6 +96,9 @@ pre.highlight {
   border-top: none;
 }
 
-code .operator {
+code .o {
   color: #3498db;
+}
+.o {
+  color: white;
 }

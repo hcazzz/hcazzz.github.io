@@ -90,7 +90,7 @@ code .operator {
 }
 </style>
 
-```jsx
+```javascript
 const EditStuff = () => {
   // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
   const { _id } = useParams();
