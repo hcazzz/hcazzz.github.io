@@ -11,11 +11,18 @@ labels:
 ---
 
 Software Engineering can be quite daunting at first glance, and on top of this, one might stumble upon design patterns which can definitely add onto the complexity. There's so much going on behind the scenes that it's easy to get distracted from little things. To make matters worse, googling different programming lingo might add onto the confusion. Especially when you get more buzzwords such as:
+<div style="display: flex; align-items: center;">
+<ul>
 <li>Singleton</li>
 <li>Facades</li>
 <li>Factories</li>
 <li>Observers</li>
 <li>Dependency Injection</li>
+</ul>
+<img width="320" height="250" src="../img/design/funnypattern.jpg" class="img-thumbnail" >
+</div>
+
+
 
 <br>
 When you first come across this you may not know what any of this means, I know I didn’t. It took me a while to finally figure out what a singleton is. It wasn’t until recently I figured out that I was using them in my code without knowing I was. Anyways, it’s important to understand what these random words are actually trying to accomplish and how they relate to software engineering.
