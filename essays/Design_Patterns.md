@@ -14,14 +14,14 @@ In the realm of Software Engineering, there are many intricacies going on behind
 
 Imagine this, you just got hired at a large company as a developer, and you take your first look at the codebase. It’s probable you have never seen something so complex or large. It’s also probable that this behemoth of a codebase can be broken down into much smaller parts. If that company utilizes design patterns, you’ll notice that the scary monster, the codebase is much simper than you thought. Now theres many different types of patterns used in software engineering,
 
-
 Software Engineering can be quite daunting at first glance, and on top of this, one might stumble upon design patterns which can definitely add onto the complexity. There's so much going on behind the scenes that it's easy to get distracted from little things. To make matters worse, googling different programming lingo might add onto the confusion. Especially when you get more buzzwords such as:
-*Singletons
-*Facades
-*Factories
-*Observers
-*Dependency Injection
+<li>Singletons</li>
+<li>Facades</li>
+<li>Factories</li>
+<li>Observers</li>
+<li>Dependency Injection</li>
 
+<br>
 When you first come across this you may not know what any of this means, I know I didn’t. It took me a while to finally figure out what a singleton is. It wasn’t until recently I figured out that I was using them in my code without knowing I was. Anyways, it’s important to understand what these random words are actually trying to accomplish and how they relate to software engineering.
 
 In order to talk about design patterns, we first must know their purpose and what they're trying to solve. You can think of design patterns like LEGO bricks, they come in many different forms and colors, but you can combine them in different ways to build something inherently complex. All while reusing some of the basic building blocks. If you have never used LEGOs before, you can think of design patterns like a building blueprint in the real world.
