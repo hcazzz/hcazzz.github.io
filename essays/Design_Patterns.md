@@ -10,10 +10,6 @@ labels:
   - Design Patterns
 ---
 
-In the realm of Software Engineering, there are many intricacies going on behind the scenes. Many of which, to the untrained eye may not be noticeable. One of these things are design patterns. While one may not know of specific design patterns, it's possible you may be using them without realizing.
-
-Imagine this, you just got hired at a large company as a developer, and you take your first look at the codebase. It’s probable you have never seen something so complex or large. It’s also probable that this behemoth of a codebase can be broken down into much smaller parts. If that company utilizes design patterns, you’ll notice that the scary monster, the codebase is much simper than you thought. Now theres many different types of patterns used in software engineering,
-
 Software Engineering can be quite daunting at first glance, and on top of this, one might stumble upon design patterns which can definitely add onto the complexity. There's so much going on behind the scenes that it's easy to get distracted from little things. To make matters worse, googling different programming lingo might add onto the confusion. Especially when you get more buzzwords such as:
 <li>Singleton</li>
 <li>Facades</li>
@@ -26,16 +22,13 @@ When you first come across this you may not know what any of this means, I know 
 
 In order to talk about design patterns, we first must know their purpose and what they're trying to solve. You can think of design patterns like LEGO bricks, they come in many different forms and colors, but you can combine them in different ways to build something inherently complex. All while reusing some of the basic building blocks. If you have never used LEGOs before, you can think of design patterns like a building blueprint in the real world.
 
-
-
 When utilized correctly, design patterns can take your code base from spaghetti that barely works, to something that is maintainable and easy to scale. Code reusability is a big one, would you rather write redundant code that takes hours, or write it once in a way that can be reused with little changes? Let's talk about a simple example, say you needed to find the area of a rectangle in your application. Each time you needed to find the area of a rectangle you coded in the same calculation. For the sake of the example, let's say you coded this calculation a few times, after a certain point you may stop to wonder, is there a better way to do this? The answer is yes, you can simply write your calculation logic and wrap it in a function. Now, whenever you need to figure out the area of a rectangle, you can just call your function. This will lead to much simpler and readable code.
-
 
 These are basic design principles that one may use while programming. So how do I use them to better my code you may ask, well the answer is it depends. One driving factor is the language at use.
 
 ## Singleton? What's That?
 
-In JavaScript, I find myself mostly using the Singleton design pattern, while at first I didn’t know it, as I learned more about design patterns I realized I am. Put it simply, the Singleton pattern is when a class in your program has a single instance but also provides global access to that instance everywhere. An example of this can be found in the <a href="https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/api/stuff/Stuff.js">Meteor React Template StuffsCollection</a> which is a collection of stuffs.
+In JavaScript, I find myself mostly using the Singleton design pattern, while at first I didn’t know it, as I learned more about design patterns I realized I am. Put it simply, the Singleton pattern is when a class in your program has a single instance but also provides global access to that instance everywhere. An example of this can be found in the <a href="https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/api/stuff/Stuff.js">Meteor React Template, StuffsCollection</a> which is a collection of stuffs.
 
 ```javascript
 import { Mongo } from 'meteor/mongo';
@@ -83,12 +76,6 @@ This line creates a ‘Stuffs’ variable which will serve as a singleton instan
 ## Not a Pattern, but Useful
 
 React Hooks are another thing that I have used often in my applications. Hooks allow you to encapsulate and reuse code. While on its own it's not considered a design pattern, it's definitely important to note. However, when paired with other things hooks can become a design pattern. For example, let's take a look at the custom react hook ‘useTracker’. In this code snippet, again from <a href="https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/ui/pages/EditStuff.jsx">Meteor React Template, EditStuff</a>
-
-<style>
-code .operator {
-  color: #3498db; /* Change this color code as desired */
-}
-</style>
 
 ```javascript
 const EditStuff = () => {
@@ -167,7 +154,6 @@ So with this repository design pattern, the repository acts as HR, in the sense 
 
 ## Why is This Important?
 
-
 While others may have their own opinions on the repository pattern, some might find it beneficial. When done correctly, the pattern promotes readability and maintainability, scalability and testability. These are all very important things when writing good code and if used correctly it can optimize your code base.
 
 <img width="250" height="250" src="../img/design/code-meme.jpg" class="img-thumbnail" >
@@ -185,6 +171,7 @@ Looking at the above examples, you may notice this code:
         }
     }
 ```
+
 There is a lot that goes into this and it can take quite a while to understand, I may even not understand it in full but this is an example of another pattern that is used a lot in C#, which is dependency injection. Instead of instantiating the context directly in the class, we can utilize dependency injection through the constructor to get an instance of the database. This allows more flexibility when it comes to things such as testing and promotes modularity. If one wanted to test this code with a sample database context, you can easily swap the contexts and use a mock database instead. 
 Dependency injection can take a good amount of time to learn in full. While you can utilize online information, I recommend a good book on dependency injection by Mark Seemann, <a href="https://www.manning.com/books/dependency-injection-principles-practices-patterns"> Dependency Injection Principles, Practices, and Patterns</a>. This book goes into great detail on dependency injection and how to use it in C#.
 
