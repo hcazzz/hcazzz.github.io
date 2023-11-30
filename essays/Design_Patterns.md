@@ -84,25 +84,33 @@ This line creates a ‘Stuffs’ variable which will serve as a singleton instan
 
 React Hooks are another thing that I have used often in my applications. Hooks allow you to encapsulate and reuse code. While on its own it's not considered a design pattern, it's definitely important to note. However, when paired with other things hooks can become a design pattern. For example, let's take a look at the custom react hook ‘useTracker’. In this code snippet, again from <a href="https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/ui/pages/EditStuff.jsx">Meteor React Template, EditStuff</a>
 
+<style>
+code .operator {
+  color: #3498db; /* Change this color code as desired */
+}
+</style>
+
 ```javascript
 const EditStuff = () => {
-// Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
-const { _id } = useParams();
-// console.log('EditStuff', _id);
-// useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-const { doc, ready } = useTracker(() => {
-// Get access to Stuff documents.
-const subscription = Meteor.subscribe(Stuffs.userPublicationName);
-// Determine if the subscription is ready
-const rdy = subscription.ready();
-// Get the document
-const document = Stuffs.collection.findOne(_id);
-return {
-doc: document,
-ready: rdy,
-};
-}, [_id]);
+  // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
+  const { _id } = useParams();
+  // console.log('EditStuff', _id);
+  // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
+  const { doc, ready } = useTracker(() => {
+    // Get access to Stuff documents.
+    const subscription = Meteor.subscribe(Stuffs.userPublicationName);
+    // Determine if the subscription is ready
+    const rdy = subscription.ready();
+    // Get the document
+    const document = Stuffs.collection.findOne(_id);
+    return {
+      doc: document,
+      ready: rdy,
+    };
+  }, [_id]);
+</javascript>
 ```
+
 This code snippet is an example similar to Observer design pattern where a subject maintains a list of its observers and notifies them of any state changes by calling one of their methods. In this context, ‘useTracker’ establishes a data connection between the Meteor data source ‘Stuffs’ and this fetches data which allows you to update/edit the data. When the state of the data is changed, it gets updated in the database and re-renders the page.
 
 ## How about a different language?
