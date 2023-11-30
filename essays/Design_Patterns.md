@@ -90,7 +90,7 @@ code .operator {
 }
 </style>
 
-```javascript
+```jsx
 const EditStuff = () => {
   // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
   const { _id } = useParams();
@@ -108,7 +108,6 @@ const EditStuff = () => {
       ready: rdy,
     };
   }, [_id]);
-</javascript>
 ```
 
 This code snippet is an example similar to Observer design pattern where a subject maintains a list of its observers and notifies them of any state changes by calling one of their methods. In this context, ‘useTracker’ establishes a data connection between the Meteor data source ‘Stuffs’ and this fetches data which allows you to update/edit the data. When the state of the data is changed, it gets updated in the database and re-renders the page.

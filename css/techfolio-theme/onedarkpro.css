@@ -95,3 +95,7 @@ pre.highlight {
   background-color: var(--background);
   border-top: none;
 }
+
+code .operator {
+  color: #3498db;
+}
