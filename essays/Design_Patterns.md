@@ -35,7 +35,7 @@ These are basic design principles that one may use while programming. So how do 
 
 ## Singleton? What's that?
 
-In JavaScript, I find myself mostly using the Singleton design pattern, while at first I didn’t know it, as I learned more about design patterns I realized I am. Put it simply, the Singleton pattern is when a class in your program has a single instance but also provides global access to that instance everywhere. An example of this can be found in the <a href=“https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/api/stuff/Stuff.js”>Meteor React Template StuffsCollection</a> which is a collection of stuffs.
+In JavaScript, I find myself mostly using the Singleton design pattern, while at first I didn’t know it, as I learned more about design patterns I realized I am. Put it simply, the Singleton pattern is when a class in your program has a single instance but also provides global access to that instance everywhere. An example of this can be found in the <a href="https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/api/stuff/Stuff.js">Meteor React Template StuffsCollection</a> which is a collection of stuffs.
 
 ```javascript
 import { Mongo } from 'meteor/mongo';
@@ -76,14 +76,13 @@ class StuffsCollection {
 export const Stuffs = new StuffsCollection();
 ```
 
-
 While that is a whole lot of code, we are mostly interested in the very last line of the code, export const Stuffs = new StuffsCollection();
 
 This line creates a ‘Stuffs’ variable which will serve as a singleton instance for the ‘StuffsCollection’ class. The reason this is exported is to allow the accessibility of it in other parts of the application. This allows you to refer to the same instance of ‘StuffsCollection’ anywhere you import it and use it. If we did not use the Singleton pattern here, you would be able to create multiple instances of the ‘StuffsCollection’ and data wouldn’t match up across each instance. This ensures that all data being worked with in this collection happens all on the same instance. 
 
 ## Not a pattern, but useful
 
-React Hooks are another thing that I have used often in my applications. Hooks allow you to encapsulate and reuse code. While on its own it's not considered a design pattern, it's definitely important to note. However, when paired with other things hooks can become a design pattern. For example, let's take a look at the custom react hook ‘useTracker’. In this code snippet, again from <a href=“https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/ui/pages/EditStuff.jsx”>Meteor React Template, EditStuff</a>
+React Hooks are another thing that I have used often in my applications. Hooks allow you to encapsulate and reuse code. While on its own it's not considered a design pattern, it's definitely important to note. However, when paired with other things hooks can become a design pattern. For example, let's take a look at the custom react hook ‘useTracker’. In this code snippet, again from <a href="https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/ui/pages/EditStuff.jsx">Meteor React Template, EditStuff</a>
 
 ```javascript
 const EditStuff = () => {
