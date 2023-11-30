@@ -15,7 +15,7 @@ In the realm of Software Engineering, there are many intricacies going on behind
 Imagine this, you just got hired at a large company as a developer, and you take your first look at the codebase. It’s probable you have never seen something so complex or large. It’s also probable that this behemoth of a codebase can be broken down into much smaller parts. If that company utilizes design patterns, you’ll notice that the scary monster, the codebase is much simper than you thought. Now theres many different types of patterns used in software engineering,
 
 Software Engineering can be quite daunting at first glance, and on top of this, one might stumble upon design patterns which can definitely add onto the complexity. There's so much going on behind the scenes that it's easy to get distracted from little things. To make matters worse, googling different programming lingo might add onto the confusion. Especially when you get more buzzwords such as:
-<li>Singletons</li>
+<li>Singleton</li>
 <li>Facades</li>
 <li>Factories</li>
 <li>Observers</li>
@@ -78,7 +78,7 @@ export const Stuffs = new StuffsCollection();
 
 While that is a whole lot of code, we are mostly interested in the very last line of the code, export const Stuffs = new StuffsCollection();
 
-This line creates a ‘Stuffs’ variable which will serve as a singleton instance for the ‘StuffsCollection’ class. The reason this is exported is to allow the accessibility of it in other parts of the application. This allows you to refer to the same instance of ‘StuffsCollection’ anywhere you import it and use it. If we did not use the Singleton pattern here, you would be able to create multiple instances of the ‘StuffsCollection’ and data wouldn’t match up across each instance. This ensures that all data being worked with in this collection happens all on the same instance. 
+This line creates a ‘Stuffs’ variable which will serve as a singleton instance for the ‘StuffsCollection’ class. The reason this is exported is to allow the accessibility of it in other parts of the application. This allows you to refer to the same instance of ‘StuffsCollection’ anywhere you import it and use it. If we did not use the singleton pattern here, you would be able to create multiple instances of the ‘StuffsCollection’ and data wouldn’t match up across each instance. This ensures that all data being worked with in this collection happens all on the same instance. 
 
 ## Not a Pattern, but Useful
 
@@ -113,7 +113,7 @@ const EditStuff = () => {
 This code snippet is an example similar to Observer design pattern where a subject maintains a list of its observers and notifies them of any state changes by calling one of their methods. In this context, ‘useTracker’ establishes a data connection between the Meteor data source ‘Stuffs’ and this fetches data which allows you to update/edit the data. When the state of the data is changed, it gets updated in the database and re-renders the page.
 
 ## How About a Different Language?
-When it comes to programming in C# you may come across the Repository pattern which is when you create a layer between an application’s business logic and data storage. You can think of it like a company's HR (Human Resources) department. HR is responsible for managing employee records, and information. They handle a lot of the paperwork involved, now if someone from another department got fired or quit, their boss would interact with HR to process it. In this example, HR can be seen as the repository layer acting as the layer between the business logic, and the data storage. 
+When it comes to programming in C# you may come across the repository pattern which is when you create a layer between an application’s business logic and data storage. You can think of it like a company's HR (Human Resources) department. HR is responsible for managing employee records, and information. They handle a lot of the paperwork involved, now if someone from another department got fired or quit, their boss would interact with HR to process it. In this example, HR can be seen as the repository layer acting as the layer between the business logic, and the data storage. 
 
 Enough analogies, in order to fully understand what we are talking about, its best to see an example, 
 
@@ -163,11 +163,11 @@ namespace Flashcards.Controllers
 }
 ```
 
-So with this Repository design pattern, the repository acts as HR, in the sense that it is the layer between application logic and the database. Like HR, the application supports adding flashcards (adding a new employee). However, it’s important to note that this repository example only involves the addition of flashcards into the database, but in an actual application there would be more logic like removal, update and deletion. All of which HR would be able to do. 
+So with this repository design pattern, the repository acts as HR, in the sense that it is the layer between application logic and the database. Like HR, the application supports adding flashcards (adding a new employee). However, it’s important to note that this repository example only involves the addition of flashcards into the database, but in an actual application there would be more logic like removal, update and deletion. All of which HR would be able to do. 
 
 ## Why is This Important?
 
-Well, others may have their own opinion on the repository pattern, and find it consulting. But the pattern promotes readability and maintainability, scalability and testability. These are all very important things when writing good code and if used correctly it can optimize your code base. 
+While others may have their own opinions on the repository pattern, some might find it beneficial. When done correctly, the pattern promotes readability and maintainability, scalability and testability. These are all very important things when writing good code and if used correctly it can optimize your code base. 
 
 ## More on Design Patterns
 
@@ -183,7 +183,7 @@ Looking at the above examples, you may notice this code:
     }
 ```
 There is a lot that goes into this and it can take quite a while to understand, I may even not understand it in full but this is an example of another pattern that is used a lot in C#, which is dependency injection. Instead of instantiating the context directly in the class, we can utilize dependency injection through the constructor to get an instance of the database. This allows more flexibility when it comes to things such as testing and promotes modularity. If one wanted to test this code with a sample database context, you can easily swap the contexts and use a mock database instead. 
-Dependency injection can take a good amount of time to learn in full. While you can utilize online information, I recommend a good book on Dependency Injection by Mark Seemann, <a href="https://www.manning.com/books/dependency-injection-principles-practices-patterns"> Dependency Injection Principles, Practices, and Patterns</a>. This book goes into great detail on dependency injection and how to use it in C#.
+Dependency injection can take a good amount of time to learn in full. While you can utilize online information, I recommend a good book on dependency injection by Mark Seemann, <a href="https://www.manning.com/books/dependency-injection-principles-practices-patterns"> Dependency Injection Principles, Practices, and Patterns</a>. This book goes into great detail on dependency injection and how to use it in C#.
 
 
 
