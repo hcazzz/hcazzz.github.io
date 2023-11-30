@@ -33,7 +33,7 @@ When utilized correctly, design patterns can take your code base from spaghetti 
 
 These are basic design principles that one may use while programming. So how do I use them to better my code you may ask, well the answer is it depends. One driving factor is the language at use.
 
-## Singleton? What's that?
+## Singleton? What's That?
 
 In JavaScript, I find myself mostly using the Singleton design pattern, while at first I didn’t know it, as I learned more about design patterns I realized I am. Put it simply, the Singleton pattern is when a class in your program has a single instance but also provides global access to that instance everywhere. An example of this can be found in the <a href="https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/api/stuff/Stuff.js">Meteor React Template StuffsCollection</a> which is a collection of stuffs.
 
@@ -80,7 +80,7 @@ While that is a whole lot of code, we are mostly interested in the very last lin
 
 This line creates a ‘Stuffs’ variable which will serve as a singleton instance for the ‘StuffsCollection’ class. The reason this is exported is to allow the accessibility of it in other parts of the application. This allows you to refer to the same instance of ‘StuffsCollection’ anywhere you import it and use it. If we did not use the Singleton pattern here, you would be able to create multiple instances of the ‘StuffsCollection’ and data wouldn’t match up across each instance. This ensures that all data being worked with in this collection happens all on the same instance. 
 
-## Not a pattern, but useful
+## Not a Pattern, but Useful
 
 React Hooks are another thing that I have used often in my applications. Hooks allow you to encapsulate and reuse code. While on its own it's not considered a design pattern, it's definitely important to note. However, when paired with other things hooks can become a design pattern. For example, let's take a look at the custom react hook ‘useTracker’. In this code snippet, again from <a href="https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/ui/pages/EditStuff.jsx">Meteor React Template, EditStuff</a>
 
@@ -112,7 +112,7 @@ const EditStuff = () => {
 
 This code snippet is an example similar to Observer design pattern where a subject maintains a list of its observers and notifies them of any state changes by calling one of their methods. In this context, ‘useTracker’ establishes a data connection between the Meteor data source ‘Stuffs’ and this fetches data which allows you to update/edit the data. When the state of the data is changed, it gets updated in the database and re-renders the page.
 
-## How about a different language?
+## How About a Different Language?
 When it comes to programming in C# you may come across the Repository pattern which is when you create a layer between an application’s business logic and data storage. You can think of it like a company's HR (Human Resources) department. HR is responsible for managing employee records, and information. They handle a lot of the paperwork involved, now if someone from another department got fired or quit, their boss would interact with HR to process it. In this example, HR can be seen as the repository layer acting as the layer between the business logic, and the data storage. 
 
 Enough analogies, in order to fully understand what we are talking about, its best to see an example, 
@@ -165,7 +165,7 @@ namespace Flashcards.Controllers
 
 So with this Repository design pattern, the repository acts as HR, in the sense that it is the layer between application logic and the database. Like HR, the application supports adding flashcards (adding a new employee). However, it’s important to note that this repository example only involves the addition of flashcards into the database, but in an actual application there would be more logic like removal, update and deletion. All of which HR would be able to do. 
 
-## Why is this important?
+## Why is This Important?
 
 Well, others may have their own opinion on the repository pattern, and find it consulting. But the pattern promotes readability and maintainability, scalability and testability. These are all very important things when writing good code and if used correctly it can optimize your code base. 
 
@@ -187,7 +187,7 @@ Dependency injection can take a good amount of time to learn in full. While you 
 
 
 
-## Is that all?
+## Is That All?
 
 While design patterns are language agnostic it’s important to know that some patterns may be more common in one language compared to another. For example, it’s more likely you’ll see dependency injection in OOP languages such as C# or Java. 
 
