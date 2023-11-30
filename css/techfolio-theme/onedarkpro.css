@@ -75,7 +75,9 @@ pre.highlight {
   color: #61afef;
 }
 
-
+.highlight span.k {
+  color: #c678dd;
+}
 .highlight span.sl {
   color: #98c379;
 }
