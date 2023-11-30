@@ -19,12 +19,9 @@ Software Engineering can be quite daunting at first glance, and on top of this, 
 <li>Observers</li>
 <li>Dependency Injection</li>
 </ul>
-<div><img width="320" height="250" src="../img/design/funnypattern.jpg" class="img-thumbnail"></div>
+<div style="margin-left: .5rem;"><img width="320" height="250" src="../img/design/funnypattern.jpg" class="img-thumbnail"></div>
 
 </div>
-
-
-
 <br>
 When you first come across this you may not know what any of this means, I know I didn’t. It took me a while to finally figure out what a singleton is. It wasn’t until recently I figured out that I was using them in my code without knowing I was. Anyways, it’s important to understand what these random words are actually trying to accomplish and how they relate to software engineering.
 
