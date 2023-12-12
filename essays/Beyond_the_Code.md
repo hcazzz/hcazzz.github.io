@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "Beyond the Code:"
+title: "Beyond the Code"
 # All dates must be YYYY-MM-DD format!
 date: 2023-11-21
 published: true
