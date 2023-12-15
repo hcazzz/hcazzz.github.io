@@ -21,7 +21,7 @@
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C#", ".Net", "Javascript", "SQL", "Java" ]
+      "keywords": [".Net", "JavaScript", "SQL", "Java", "Bootstrap", "React", "MongoDB" ]
     },
     {
       "name": "Toolsets/OS",
@@ -43,7 +43,7 @@
     {
       "company": "Target",
       "position": "Flex Fulfillment",
-      "website": "Target.com",
+      "website": "https://target.com",
       "startDate": "2019-11-20",
       "endDate": "2023-04-10",
       "summary": "Picked, packed, and sorted store merchandise quickly and effectively and ensured a high quality experience for our store guests.",
