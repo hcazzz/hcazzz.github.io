@@ -14,7 +14,10 @@ labels:
 summary: "The final project created for ICS 314."
 ---
 
-  <img  src="../img/uhmarket.png" >
+<div class="text-center p-4">
+  <img width="auto" height="300" src="../img/uhmarket.png" class="img-thumbnail" >
+</div>
+
 
 <a href="https://the-manoa-marketplace.github.io/uh-marketplace.github.io/">UH Marketplace</a> was the final project I helped create in <a href="https://courses.ics.hawaii.edu/ics314f23/">ICS 314</a>. I worked with 4 others to create this project, which allows people from the University of Hawaii system to create an account and buy and sell items. 
 
