@@ -4,7 +4,7 @@ type: project
 image: img/operations.jpg
 title: "Calculator"
 date: 2022
-published: true
+published: false
 labels:
   - JavaScript
   - HTML
