@@ -22,11 +22,11 @@ One of the primary reasons for my initial frustration with ESLint was the learni
 In order to fully understand what I’m writing about, it’s important to give some examples. Here are a few examples using ESLint, the code here is just a simple JavaScript react component that uses props to display a greeting to a user.
 
 <div style="display: flex; justify-content: center;">
-    <div style="max-width: 50%;">
-        <img style="width: 100%; height: auto;" src="../img/ESLintTabError.png" class="img-thumbnail" alt="ESLintTabErrorImage">
+    <div style="max-width: 50%; padding-right: 10px;">
+        <img style="width: 100%; height: auto;" src="../img/ESLintTabError.png" alt="ESLintTabErrorImage">
     </div>
-    <div style="max-width: 50%;">
-        <img style="width: 100%; height: auto;" src="../img/ESLintNoTabError.png" class="img-thumbnail" alt="ESLintNoTabErrorImage">
+    <div style="max-width: 50%; padding-left: 10px;">
+        <img style="width: 100%; height: auto;" src="../img/ESLintNoTabError.png" alt="ESLintNoTabErrorImage">
     </div>
 </div>
 
@@ -36,13 +36,14 @@ In this ESLint example, you can see that there are red lines showing that there 
 
 
 <div style="display: flex; justify-content: center;">
-    <div style="max-width: 50%;">
-        <img style="width: 100%; height: auto;" src="../img/ESLintProp.png" class="img-thumbnail" alt="ESLintPropImage">
+    <div style="max-width: 50%; padding-right: 10px;">
+        <img style="width: 100%; height: auto;" src="../img/ESLintProp.png" alt="ESLintPropImage">
     </div>
-    <div style="max-width: 50%;">
-        <img style="width: 100%; height: auto;" src="../img/ESLintPropNoError.png" class="img-thumbnail" alt="ESLintPropNoErrorImage">
+    <div style="max-width: 50%; padding-left: 10px;">
+        <img style="width: 100%; height: auto;" src="../img/ESLintPropNoError.png" alt="ESLintPropNoErrorImage">
     </div>
 </div>
+
 
 
 
