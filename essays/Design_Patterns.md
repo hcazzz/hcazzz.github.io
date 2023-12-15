@@ -11,18 +11,18 @@ labels:
 ---
 
 Software Engineering can be quite daunting at first glance, and on top of this, one might stumble upon design patterns which can definitely add to the complexity. There’s so much going on behind the scenes that it’s easy to get distracted from little things. To make matters worse, googling different programming lingo might add to the confusion. Especially when you get more buzzwords, such as
-<div style="display: flex; align-items: center;">
-<ul>
-<li>Singleton</li>
-<li>Facades</li>
-<li>Factories</li>
-<li>Observers</li>
-<li>Dependency Injection</li>
-</ul>
-<div style="margin-left: .5rem;"><img width="320" height="250" src="../img/design/funnypattern.jpg" class="img-thumbnail"></div>
-
+<div style="display: flex; align-items: center; justify-content: space-between;">
+    <ul>
+        <li>Singleton</li>
+        <li>Facades</li>
+        <li>Factories</li>
+        <li>Observers</li>
+        <li>Dependency Injection</li>
+    </ul>
+    <div style="flex-grow: 1; text-align: right;"><img width="320" height="250" src="../img/design/funnypattern.jpg" class="img-thumbnail"></div>
 </div>
 <br>
+
 When you first come across this, you may not know what any of this means. I know I didn’t. As it took me a while to figure out what a singleton is. It wasn’t until recently I figured out that I was using them in my code without knowing I was. Anyway, it’s important to understand what these random words are actually trying to accomplish and how they relate to software engineering.
 
 In order to talk about design patterns, we first must know their purpose and what they’re trying to solve. You can think of design patterns like LEGO bricks. They come in many forms and colors, but you can combine them in different ways to build something inherently complex. All while reusing some of the basic building blocks. If you have never used LEGOs before, you can think of design patterns like a building blueprint in the real world.
