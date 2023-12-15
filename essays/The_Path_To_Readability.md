@@ -21,13 +21,29 @@ One of the primary reasons for my initial frustration with ESLint was the learni
 
 In order to fully understand what I’m writing about, it’s important to give some examples. Here are a few examples using ESLint, the code here is just a simple JavaScript react component that uses props to display a greeting to a user.
 
-<img height="250" src="../img/ESLintTabError.png" class="img-thumbnail" >
-<img height="250" src="../img/ESLintNoTabError.png" class="img-thumbnail" >
+<div style="display: flex; width: 600px;">
+    <div style="flex: 1; margin-right: 10px;">
+        <img style="max-width: 100%; height: auto;" src="../img/ESLintTabError.png" class="img-thumbnail" alt="ESLintTabErrorImage">
+    </div>
+    <div style="flex: 1;">
+        <img style="max-width: 100%; height: auto;" src="../img/ESLintNoTabError.png" class="img-thumbnail" alt="ESLintNoTabErrorImage">
+    </div>
+</div>
+
 
 In this ESLint example, you can see that there are red lines showing that there are indentation errors. Some people are more iffy about their code and indentations, but some of the people I know don’t care to fix indentations or random spacing throughout their code. This can make it a little harder to read quickly. However, ESLint can fix that, you don’t even need to fix it manually, on the error ESLint asks if you want to fix the ‘indent’ error, pressing this will fix the error for you. Or you can hit ‘more actions’ and ESLint will give you the ability to fix the entire file with one click.
 
-<img height="250" src="../img/ESLintProp.png" class="img-thumbnail" >
-<img height="250" src="../img/ESLintPropNoError.png" class="img-thumbnail" >
+
+<div style="display: flex; width: 600px;">
+    <div style="flex: 1; margin-right: 10px;">
+        <img style="max-width: 100%; height: auto;" src="../img/ESLintProp.png" class="img-thumbnail" alt="ESLintPropImage">
+    </div>
+    <div style="flex: 1;">
+        <img style="max-width: 100%; height: auto;" src="../img/ESLintPropNoError.png" class="img-thumbnail" alt="ESLintPropNoErrorImage">
+    </div>
+</div>
+
+
 
 Now, lets see another area ESLint can make your code better, in this we will use the same example, but with prop validation. If you write using this code, ESLint will give you this error and give you two options, the first one is to suppress the error and it will go away, or you can add the prop types to fix it. Doing it this way is the correct way, but whichever one will work. In our fixed example, we added prop validation that defines the name prop. Name is a prop that should be a string and the isRequired makes it to where it is required for the component to be used.
 
