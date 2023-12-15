@@ -7,10 +7,10 @@ date: 2023-10-04
 published: true
 labels:
   - Web Design
-  - Learning
   - HTML
   - CSS
   - Bootstrap
+  - React-Bootstrap
 
 ---
 ## Web Design: A Nightmare
@@ -30,8 +30,8 @@ So, if you’re planning to learn Bootstrap but not CSS, I’d advise against it
 ## Designing Made Simple
 As mentioned before, Bootstrap makes designing a website a lot easier. With its extensive library of classes, you can easily create a website that looks like it was designed by a professional. However, this doesn’t mean you can’t do the same with CSS. It’s just a lot easier to do it with Bootstrap. 
 
-If you wanted to take it a step further, you could use <a href="https://react-bootstrap.github.io/">react-bootstrap</a>
-, which is a library of Bootstrap components that can be used in React. This is what I used to create my final project. It was a lot easier to create a website using react-bootstrap than it was to use raw CSS. If you want more information you can check out my final project using react-bootstrap here, <a href="https://the-manoa-marketplace.github.io/uh-marketplace.github.io/">UH Marketplace</a>.
+If you wanted to take it a step further, you could use <a href="https://react-bootstrap.github.io/">React-Bootstrap</a>
+, which is a library of Bootstrap components that can be used in React. This is what I used to create my final project. It was a lot easier to create a website using React-Bootstrap than it was to use raw CSS. If you want more information you can check out my final project using React-Bootstrap here, <a href="https://the-manoa-marketplace.github.io/uh-marketplace.github.io/">UH Marketplace</a>.
 
 ## Examples
 
@@ -61,7 +61,7 @@ const SimpleNavbar = () => {
 export default SimpleNavbar;
 ```
 
-Here is an example using regular Bootstrap
+Here is an example using regular Bootstrap.
 
 ```html
 <!DOCTYPE html>
@@ -106,7 +106,7 @@ Here is an example using regular Bootstrap
 </html>
 ```
 
-And here is an example of a navbar using raw CSS and HTML 
+And here is an example of a navbar using raw CSS and HTML.
 
 ``` html
 <!DOCTYPE html>
@@ -175,5 +175,5 @@ body {
   color: #007bff;
 }
 ```
-As you can see, as you go down the list, more and more code gets added, in my personal opinion as a non UI designer, I would rather use Bootstrap or react-bootstrap. It's a lot easier to use and it's a lot faster to create a website. But that is subjective, some people may prefer to use raw CSS and HTML. Or maybe they may prefer a different UI framework like tailwind or material UI. It's all up to you and what you prefer.
+As you can see, as you go down the list, more and more code gets added, in my personal opinion as a non UI designer, I would rather use Bootstrap or React-Bootstrap. It's a lot easier to use and it's a lot faster to create a website. But that is subjective, some people may prefer to use raw CSS and HTML. Or maybe they may prefer a different UI framework like tailwind or material UI. It's all up to you and what you prefer.
 
