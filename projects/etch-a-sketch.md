@@ -45,3 +45,4 @@ To do this I used hex color codes which is the # sign and 6 random digits follow
 The function takes a string of the possible color values and randomly 
 generates random characters from the string to create the 6 digit hex color code.
 
+To view the source code you can visit: <a href="https://github.com/hcazzz/etch-a-sketch">Etch-a-Sketch</a>
