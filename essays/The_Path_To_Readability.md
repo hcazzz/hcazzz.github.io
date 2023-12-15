@@ -21,25 +21,26 @@ One of the primary reasons for my initial frustration with ESLint was the learni
 
 In order to fully understand what I’m writing about, it’s important to give some examples. Here are a few examples using ESLint, the code here is just a simple JavaScript react component that uses props to display a greeting to a user.
 
-<div style="display: flex; width: 600px;">
-    <div style="flex: 1; margin-right: 10px;">
-        <img style="max-width: 100%; height: auto;" src="../img/ESLintTabError.png" class="img-thumbnail" alt="ESLintTabErrorImage">
+<div style="display: flex; justify-content: center;">
+    <div style="max-width: 50%;">
+        <img style="width: 100%; height: auto;" src="../img/ESLintTabError.png" class="img-thumbnail" alt="ESLintTabErrorImage">
     </div>
-    <div style="flex: 1;">
-        <img style="max-width: 100%; height: auto;" src="../img/ESLintNoTabError.png" class="img-thumbnail" alt="ESLintNoTabErrorImage">
+    <div style="max-width: 50%;">
+        <img style="width: 100%; height: auto;" src="../img/ESLintNoTabError.png" class="img-thumbnail" alt="ESLintNoTabErrorImage">
     </div>
 </div>
+
 
 
 In this ESLint example, you can see that there are red lines showing that there are indentation errors. Some people are more iffy about their code and indentations, but some of the people I know don’t care to fix indentations or random spacing throughout their code. This can make it a little harder to read quickly. However, ESLint can fix that, you don’t even need to fix it manually, on the error ESLint asks if you want to fix the ‘indent’ error, pressing this will fix the error for you. Or you can hit ‘more actions’ and ESLint will give you the ability to fix the entire file with one click.
 
 
-<div style="display: flex; width: 600px;">
-    <div style="flex: 1; margin-right: 10px;">
-        <img style="max-width: 100%; height: auto;" src="../img/ESLintProp.png" class="img-thumbnail" alt="ESLintPropImage">
+<div style="display: flex; justify-content: center;">
+    <div style="max-width: 50%;">
+        <img style="width: 100%; height: auto;" src="../img/ESLintProp.png" class="img-thumbnail" alt="ESLintPropImage">
     </div>
-    <div style="flex: 1;">
-        <img style="max-width: 100%; height: auto;" src="../img/ESLintPropNoError.png" class="img-thumbnail" alt="ESLintPropNoErrorImage">
+    <div style="max-width: 50%;">
+        <img style="width: 100%; height: auto;" src="../img/ESLintPropNoError.png" class="img-thumbnail" alt="ESLintPropNoErrorImage">
     </div>
 </div>
 
