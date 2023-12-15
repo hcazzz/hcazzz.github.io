@@ -30,7 +30,7 @@ The most notable things I worked on in this project is the create and edit listi
   <img width="500px" height="500px" src="../img/addlisting.png" class="img-thumbnail" >
 </div>
 
-The add listing page allows the user to multiple images and delete them. In order to add images and retrieve them from the database I had to utilize cloudinary to store the images and retrieve them. I also had to create a database scheme to store the images in the database. Here is the code that handled uploading images to the cloudinary endpoint.
+The add listing page allows the user to multiple images and delete them. In order to add images and retrieve them from the database I had to utilize cloudinary to store the images and retrieve them. I also had to create a database scheme to store the images in the database. Here is the code that handled uploading images to the cloudinary endpoint. This code can be found at <a href="https://github.com/the-manoa-marketplace/the-real-manoa-marketplace/blob/main/app/imports/ui/services/CloudinaryUpload.js">CloudinaryUpload.js</a>.
 
 ```javascript
 import axios from 'axios';
@@ -53,6 +53,7 @@ const postImage = async (imagefile) => {
 
 export default { postImage };
 ```
+
 It was quite difficult to come to this point as I had to learn how to use cloudinary to upload images. In order to correctly do create the page I had to make sure the user could see the images they upload and they were able to delete them. As I had to deal with state I used the React useState to do this. In this code block it shows the handleImageDelete function which deletes the image from the state and the handleImagePreview function which adds the image to the state, it also shows the submit function which uploads the images to the cloudinary endpoint and stores the url in the database.
 
 ```javascript
@@ -76,6 +77,7 @@ const AddListing = () => {
     }
     const owner = Meteor.user().username;
 ```
+If you want to see the full code for the add listing page you can do so here <a href="https://github.com/the-manoa-marketplace/the-real-manoa-marketplace/blob/main/app/imports/ui/pages/AddListing.jsx">AddListing.jsx</a>.
 
 It was also important to only upload images to the cloudinary endpoint when the user submits the form. This was done by using the submit function which is called when the user clicks the submit button. This was important as it would be a waste of resources to upload images to the cloudinary endpoint if the user decides to not submit the form.
 
@@ -108,8 +110,9 @@ The images were retrieved from this segment of code, if the listing had no image
 
   const [images, setImages] = useState(doc.images || []);
 ```
+If you want to see the full code for the edit listing page you can do so here <a href="https://github.com/the-manoa-marketplace/the-real-manoa-marketplace/blob/main/app/imports/ui/pages/EditListing.jsx">EditListing.jsx</a>.
 
-Besides the create and edit listing pages, I also worked on the database scheme. I created the database scheme using the SimpleSchema package. Here is an example of the database scheme I created.
+Besides the create and edit listing pages, I also worked on the database scheme. I created the database scheme using the SimpleSchema package. Here is an example of the database scheme I created. The code can be found here <a href="https://github.com/the-manoa-marketplace/the-real-manoa-marketplace/blob/main/app/imports/api/listing/Listing.js">Listing.js</a>.
 
 ```javascript
 import { Mongo } from 'meteor/mongo';
