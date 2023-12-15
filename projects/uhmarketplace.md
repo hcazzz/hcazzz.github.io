@@ -24,7 +24,7 @@ summary: "The final project created for ICS 314."
 
 The project was created using Meteor, MongoDB, React, and Bootstrap. We used Meteor to create the application, MongoDB to store the data, React to create the front end, and Bootstrap to make the website look nice. The project used agile project management to create deliverables and milestones. We used GitHub projects to create milestones and issues to work on. We used ESLint to enforce coding standards and used GitHub to store our code.
 
-The most notable things I worked on in this project is the create and edit listing pages, and the database scheme. The create listing page was created using react-bootstrap forms and allows the user to add images, which was the hardest part. Here is an example of the add listing page
+The most notable things I worked on in this project is the create and edit listing pages, and the database scheme. The create listing page was created using react-bootstrap forms and allows the user to add images, which was the hardest part. Here is an example of the add listing page.
 
 <div class="text-center p-4">
   <img width="500px" height="500px" src="../img/addlisting.png" class="img-thumbnail" >
