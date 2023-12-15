@@ -26,8 +26,8 @@ In order to fully understand what I’m writing about, it’s important to give 
 
 In this ESLint example, you can see that there are red lines showing that there are indentation errors. Some people are more iffy about their code and indentations, but some of the people I know don’t care to fix indentations or random spacing throughout their code. This can make it a little harder to read quickly. However, ESLint can fix that, you don’t even need to fix it manually, on the error ESLint asks if you want to fix the ‘indent’ error, pressing this will fix the error for you. Or you can hit ‘more actions’ and ESLint will give you the ability to fix the entire file with one click.
 
-<img height="250" src="../img/ESLintPropError.png" class="img-thumbnail" >
-<img height="250" src="../img/ESLintPropFixed.png" class="img-thumbnail" >
+<img height="250" src="../img/ESLintProp.png" class="img-thumbnail" >
+<img height="250" src="../img/ESLintPropNoError.png" class="img-thumbnail" >
 
 Now, lets see another area ESLint can make your code better, in this we will use the same example, but with prop validation. If you write using this code, ESLint will give you this error and give you two options, the first one is to suppress the error and it will go away, or you can add the prop types to fix it. Doing it this way is the correct way, but whichever one will work. In our fixed example, we added prop validation that defines the name prop. Name is a prop that should be a string and the isRequired makes it to where it is required for the component to be used.
 
