@@ -11,7 +11,7 @@ labels:
 ---
 
 Software Engineering can be quite daunting at first glance, and on top of this, one might stumble upon design patterns which can definitely add to the complexity. There’s so much going on behind the scenes that it’s easy to get distracted from little things. To make matters worse, googling different programming lingo might add to the confusion. Especially when you get more buzzwords, such as
-<div style="display: flex; align-items: center; justify-content: space-between;">
+<div style="display: flex; align-items: center; justify-content: space-around;">
     <ul>
         <li>Singleton</li>
         <li>Facades</li>
@@ -19,7 +19,7 @@ Software Engineering can be quite daunting at first glance, and on top of this, 
         <li>Observers</li>
         <li>Dependency Injection</li>
     </ul>
-    <div style="flex-grow: 1; text-align: right;"><img width="320" height="250" src="../img/design/funnypattern.jpg" class="img-thumbnail"></div>
+    <div style="text-align: right;"><img width="320" height="250" src="../img/design/funnypattern.jpg" class="img-thumbnail"></div>
 </div>
 <br>
 
