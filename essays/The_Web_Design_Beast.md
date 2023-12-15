@@ -37,7 +37,7 @@ If you wanted to take it a step further, you could use <a href="https://react-bo
 
 Now that I’ve talked about different ways to do web design, let's look at some examples comparing UI frameworks to raw CSS. If you wanted to create a navbar, you could do it with CSS, but it would take a lot longer than if you were to use Bootstrap. Here is an example of a navbar using react-bootstrap.
 
-```JavaScript
+```javascript
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 
@@ -63,7 +63,7 @@ export default SimpleNavbar;
 
 Here is an example using regular Bootstrap
 
-```HTML
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,7 +108,7 @@ Here is an example using regular Bootstrap
 
 And here is an example of a navbar using raw CSS and HTML 
 
-```HTML
+``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
