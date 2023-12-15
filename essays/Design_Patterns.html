@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Design Patterns? Never Heard of Them | Zachary Stoddard | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/Hcazzz.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zachary Stoddard | Professional Portfolio">
+    <meta property="og:url" content="https://hcazzz.github.io//essays/Design_Patterns.html">
+    <meta property="og:title" content="Design Patterns? Never Heard of Them | Zachary Stoddard | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/Hcazzz.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/onedarkpro.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Design Patterns? Never Heard of Them | Zachary Stoddard | Professional Portfolio</title>
+  </head>
+  <body>
+  <header style="background-color: #282c34" class="navbar navbar-expand bg-gradient py-3 ">
+  <div class="container-fluid">
+    <a style="color: var(--keyword)" class="navbar-brand" href="/">Zachary Stoddard</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a style="color: var(--keyword)" class="nav-link" href="/#projects">Projects</a>
+        <a style="color: var(--keyword)" class="nav-link" href="/#essays">Essays</a>
+        <a style="color: var(--keyword)" class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Design Patterns? Never Heard of Them</h1>
+  <span class="date">29 Nov 2023</span>
+  <hr>
+  <p>Software Engineering can be quite daunting at first glance, and on top of this, one might stumble upon design patterns which can definitely add to the complexity. There’s so much going on behind the scenes that it’s easy to get distracted from little things. To make matters worse, googling different programming lingo might add to the confusion. Especially when you get more buzzwords, such as</p>
+<div style="display: flex; align-items: center;">
+<ul>
+<li>Singleton</li>
+<li>Facades</li>
+<li>Factories</li>
+<li>Observers</li>
+<li>Dependency Injection</li>
+</ul>
+<div style="margin-left: .5rem;"><img width="320" height="250" src="../img/design/funnypattern.jpg" class="img-thumbnail" /></div>
+
+</div>
+<p><br />
+When you first come across this, you may not know what any of this means. I know I didn’t. As it took me a while to figure out what a singleton is. It wasn’t until recently I figured out that I was using them in my code without knowing I was. Anyway, it’s important to understand what these random words are actually trying to accomplish and how they relate to software engineering.</p>
+
+<p>In order to talk about design patterns, we first must know their purpose and what they’re trying to solve. You can think of design patterns like LEGO bricks. They come in many forms and colors, but you can combine them in different ways to build something inherently complex. All while reusing some of the basic building blocks. If you have never used LEGOs before, you can think of design patterns like a building blueprint in the real world.</p>
+
+<p>When utilized correctly, design patterns can take your code base from spaghetti that barely works to something that is maintainable and easy to scale. Code reusability is a big one. Would you rather write redundant code that takes hours, or write it once in a way that can be reused with little changes? Let’s talk about a simple example, say you needed to find the area of a rectangle in your application. Each time you needed to find the area of a rectangle, you coded in the same calculation. For the sake of the example, let’s say you coded this calculation a few times. After a certain point you may stop to wonder, is there a better way to do this? The answer is yes, you can simply write your calculation logic and wrap it in a function. Now, whenever you need to figure out the area of a rectangle, you can just call your function. This will lead to much simpler and readable code.</p>
+
+<p>These are basic design principles that one may use while programming. So how do I use them to better my code you may ask, well the answer is it depends. One driving factor is the language at use.</p>
+
+<h2 id="singleton-whats-that">Singleton? What’s That?</h2>
+
+<p>In JavaScript, I find myself mostly using the Singleton design pattern, while at first I didn’t know it. As I learned more about design patterns, I realized I am. Put it simply, the Singleton pattern is when a class in your program has a single instance but also provides global access to that instance everywhere. An example of this can be found in the <a href="https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/api/stuff/Stuff.js">Meteor React Template, StuffsCollection</a> which is a collection of stuffs.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Mongo</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">meteor/mongo</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">SimpleSchema</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">simpl-schema</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The StuffsCollection. It encapsulates state and variable values for stuff.
+ */</span>
+<span class="kd">class</span> <span class="nx">StuffsCollection</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// The name of this collection.</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">StuffsCollection</span><span class="dl">'</span><span class="p">;</span>
+    <span class="c1">// Define the Mongo collection.</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">collection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Mongo</span><span class="p">.</span><span class="nx">Collection</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+    <span class="c1">// Define the structure of each document in the collection.</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">schema</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SimpleSchema</span><span class="p">({</span>
+      <span class="na">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+      <span class="na">quantity</span><span class="p">:</span> <span class="nb">Number</span><span class="p">,</span>
+      <span class="na">owner</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+      <span class="na">condition</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">type</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+        <span class="na">allowedValues</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">excellent</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">good</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">fair</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">poor</span><span class="dl">'</span><span class="p">],</span>
+        <span class="na">defaultValue</span><span class="p">:</span> <span class="dl">'</span><span class="s1">good</span><span class="dl">'</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">});</span>
+    <span class="c1">// Attach the schema to the collection, so all attempts to insert a document are checked against schema.</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">attachSchema</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">schema</span><span class="p">);</span>
+    <span class="c1">// Define names for publications and subscriptions</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">userPublicationName</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">.publication.user`</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">adminPublicationName</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">.publication.admin`</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+ * The singleton instance of the StuffsCollection.
+ * @type {StuffsCollection}
+ */</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">Stuffs</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">StuffsCollection</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>While that is a lot of code, we are most interested in the very last line of the code, export const Stuffs = new StuffsCollection();</p>
+
+<p>This line creates a ‘Stuffs’ variable which will serve as a singleton instance for the ‘StuffsCollection’ class. The reason this is exported is to allow the accessibility of it in other parts of the application. This allows you to refer to the same instance of ‘StuffsCollection’ anywhere you import it and use it. If we did not use the singleton pattern here, you would be able to create multiple instances of the ‘StuffsCollection’ and data wouldn’t match up across each instance. This ensures that all data being worked with in this collection happens all on the same instance.</p>
+
+<h2 id="not-a-pattern-but-useful">Not a Pattern, but Useful</h2>
+
+<p>React Hooks are another thing that I have used often in my applications. Hooks allow you to encapsulate and reuse code. While on its own it’s not considered a design pattern, it’s definitely important to note. However, when paired with other things, hooks can become a design pattern. For example, Let’s take a look at the custom react hook ‘useTracker’. In this code snippet, again from  <a href="https://github.com/ics-software-engineering/meteor-application-template-react/blob/main/app/imports/ui/pages/EditStuff.jsx">Meteor React Template, EditStuff</a></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">EditStuff</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">_id</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useParams</span><span class="p">();</span>
+  <span class="c1">// console.log('EditStuff', _id);</span>
+  <span class="c1">// useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">doc</span><span class="p">,</span> <span class="nx">ready</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useTracker</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// Get access to Stuff documents.</span>
+    <span class="kd">const</span> <span class="nx">subscription</span> <span class="o">=</span> <span class="nx">Meteor</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">Stuffs</span><span class="p">.</span><span class="nx">userPublicationName</span><span class="p">);</span>
+    <span class="c1">// Determine if the subscription is ready</span>
+    <span class="kd">const</span> <span class="nx">rdy</span> <span class="o">=</span> <span class="nx">subscription</span><span class="p">.</span><span class="nx">ready</span><span class="p">();</span>
+    <span class="c1">// Get the document</span>
+    <span class="kd">const</span> <span class="nb">document</span> <span class="o">=</span> <span class="nx">Stuffs</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span><span class="nx">_id</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">doc</span><span class="p">:</span> <span class="nb">document</span><span class="p">,</span>
+      <span class="na">ready</span><span class="p">:</span> <span class="nx">rdy</span><span class="p">,</span>
+    <span class="p">};</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">_id</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<p>This code snippet is an example similar to Observer design pattern where a subject maintains a list of its observers and notifies them of any state changes by calling one of their methods. In this context, ‘useTracker’ establishes a data connection between the Meteor data source ‘Stuffs’ and this fetches data, which allows you to update/edit the data. When the state of the data is changed, it gets updated in the database and re-renders the page.</p>
+
+<h2 id="how-about-a-different-language">How About a Different Language?</h2>
+<p>When it comes to programming in C# you may come across the repository pattern, which is when you create a layer between an application’s business logic and data storage. You can think of it as a company’s HR (Human Resources) department. HR is responsible for managing employee records and information. They handle a lot of the paperwork involved. Now, if someone from another department got fired or quit, their boss would interact with HR to process it. In this example, HR can be seen as the repository layer acting as the layer between the business logic and the data storage.</p>
+
+<p>Enough analogies. In order to fully understand what we are talking about, it’s best to see an example,</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">Flashcards.Data</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="nc">FlashcardRepository</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">FlashcardContext</span> <span class="n">_context</span><span class="p">;</span>
+
+        <span class="k">public</span> <span class="nf">FlashcardRepository</span><span class="p">(</span><span class="n">FlashcardContext</span> <span class="n">context</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_context</span> <span class="p">=</span> <span class="n">context</span> <span class="p">??</span> <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentNullException</span><span class="p">(</span><span class="k">nameof</span><span class="p">(</span><span class="n">context</span><span class="p">));</span>
+        <span class="p">}</span>
+
+        <span class="k">internal</span> <span class="k">void</span> <span class="nf">AddFlashcard</span><span class="p">(</span><span class="n">Flashcard</span> <span class="n">newFlashcard</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_context</span><span class="p">.</span><span class="n">Flashcards</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">newFlashcard</span><span class="p">);</span>
+            <span class="n">_context</span><span class="p">.</span><span class="nf">SaveChanges</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Here is a small example of a FlashcardRepository. In this example, context represents the database sessions that the class will use to interact with the database. In this sample, the repository is capable of adding a new Flashcard into the context or database, and then it saves the changes. The next question is how is this used? Well, we have a few ways to do it. To keep it simple, there would be a user interface that collects the new flashcards data. From there we can pass it to the controller. Here’s a simple example:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">Flashcards.Controllers</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">FlashcardController</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">IFlashcardRepository</span> <span class="n">_flashcardRepository</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">IUserInterface</span> <span class="n">_userInterface</span><span class="p">;</span>
+
+        <span class="k">public</span> <span class="nf">FlashcardController</span><span class="p">(</span><span class="n">IFlashcardRepository</span> <span class="n">flashcardRepository</span><span class="p">,</span> <span class="n">IUserInterface</span> <span class="n">userInterface</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_flashcardRepository</span> <span class="p">=</span> <span class="n">flashcardRepository</span><span class="p">;</span>
+            <span class="n">_userInterface</span> <span class="p">=</span> <span class="n">userInterface</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">AddFlashcard</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">newFlashcard</span> <span class="p">=</span> <span class="n">_userInterface</span><span class="p">.</span><span class="nf">GetFlashcardInfo</span><span class="p">();</span>
+            <span class="n">_flashcardRepository</span><span class="p">.</span><span class="nf">AddFlashcard</span><span class="p">(</span><span class="n">newFlashcard</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>So with this repository design pattern, the repository acts as HR, in the sense that it is the layer between application logic and the database. Like HR, the application supports adding flashcards (adding a new employee). However, it’s important to note that this repository example only involves the addition of flashcards into the database, but in an actual application, There would be more logic like removal, update and deletion. All of which HR would be able to do.</p>
+
+<h2 id="why-is-this-important">Why is This Important?</h2>
+
+<p>While others may have their own opinions on the repository pattern, some might find it beneficial. When done correctly, the pattern promotes readability and maintainability, scalability, and testability. These are all very important things when writing good code and if used correctly, it can optimize your code base.</p>
+
+<p><img width="250" height="250" src="../img/design/code-meme.jpg" class="img-thumbnail" /></p>
+
+<h2 id="more-on-design-patterns">More on Design Patterns</h2>
+
+<p>Looking at the above examples, you may notice this code:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">private</span> <span class="k">readonly</span> <span class="n">FlashcardContext</span> <span class="n">_context</span><span class="p">;</span>
+
+        <span class="k">public</span> <span class="nf">FlashcardRepository</span><span class="p">(</span><span class="n">FlashcardContext</span> <span class="n">context</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_context</span> <span class="p">=</span> <span class="n">context</span> <span class="p">??</span> <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentNullException</span><span class="p">(</span><span class="k">nameof</span><span class="p">(</span><span class="n">context</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>There is a lot that goes into this, and it can take quite a while to understand. I may even not understand it in full, but this is an example of another pattern that is used a lot in C#, which is dependency injection. Instead of instantiating the context directly in the class, we can utilize dependency injection through the constructor to get an instance of the database. This allows more flexibility when it comes to things such as testing and promotes modularity. If one wanted to test this code with a sample database context, you can easily swap the contexts and use a mock database instead.
+Dependency injection can take a good amount of time to learn in full. While you can utilize online information, I recommend a good book on dependency injection by Mark Seemann, <a href="https://www.manning.com/books/dependency-injection-principles-practices-patterns"> Dependency Injection Principles, Practices, and Patterns</a>. This book goes into great detail on dependency injection and how to use it in C#.</p>
+
+<h2 id="is-that-all">Is That All?</h2>
+
+<p>While design patterns are language agnostic, it’s important to know that some patterns may be more common in one language compared to another. For example, it’s more likely you’ll see dependency injection in OOP languages such as C# or Java.</p>
+
+<p>With that being said, design patterns can be very useful, regardless of the chosen language. But when applied incorrectly, they can definitely do more harm than good. It’s important to make sure you actually need to use a certain design pattern and you’re not blindly applying a pattern to every problem you encounter. This can overly complicate and bloat your codebase, leading to spaghetti code. Before utilizing a certain design pattern, you should always think about the tradeoffs of using it and if it’s actually necessary. You don’t want to run the risk of complicating your code if you don’t need to.</p>
+
+
+</div>
+
+<footer style="background-color: var(--tf-page-bg-color)" class="navbar navbar-expand ">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

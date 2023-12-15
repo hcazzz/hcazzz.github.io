@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Etch-A-Sketch | Zachary Stoddard | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/Hcazzz.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zachary Stoddard | Professional Portfolio">
+    <meta property="og:url" content="https://hcazzz.github.io//projects/etch-a-sketch.html">
+    <meta property="og:title" content="Etch-A-Sketch | Zachary Stoddard | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/Hcazzz.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/onedarkpro.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Etch-A-Sketch | Zachary Stoddard | Professional Portfolio</title>
+  </head>
+  <body>
+  <header style="background-color: #282c34" class="navbar navbar-expand bg-gradient py-3 ">
+  <div class="container-fluid">
+    <a style="color: var(--keyword)" class="navbar-brand" href="/">Zachary Stoddard</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a style="color: var(--keyword)" class="nav-link" href="/#projects">Projects</a>
+        <a style="color: var(--keyword)" class="nav-link" href="/#essays">Essays</a>
+        <a style="color: var(--keyword)" class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Etch-A-Sketch</h1>
+ <div class="text-center p-4">
+  <img width="500px" height="500px" src="../img/etchASketchGif.gif" class="img-thumbnail" />
+  
+ 
+</div>
+
+<p>Etch-A-Sketch is a mechanical drawing toy where you twist two knobs, and you can make an image in black and white. This project was created to mimic a digital version of that game.</p>
+
+<p>For this project, I utilized JavaScript, HTML and CSS to create Etch-A-Sketch. The project is capable of creating a grid up to 100x100 and allows you to draw using your mouse. You are able to clear the grid and also change the color to be rainbow which utilizes a random color generator to do so. As you hover over a grid with your mouse the grid will change color to either black or a random color.</p>
+
+<p>Here is some code that illustrates how I received a random color.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getRandomColor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">availableCharacters</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">0123456789ABCDEF</span><span class="dl">'</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">availableCharactersLength</span> <span class="o">=</span> <span class="nx">availableCharacters</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">color</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">#</span><span class="dl">'</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">color</span> <span class="o">+=</span> <span class="nx">availableCharacters</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">availableCharactersLength</span><span class="p">)];</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">color</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>To do this I used hex color codes which is the # sign and 6 random digits following. 
+The function takes a string of the possible color values and randomly 
+generates random characters from the string to create the 6 digit hex color code.</p>
+
+<p>To view the source code you can visit: <a href="https://github.com/hcazzz/etch-a-sketch">Etch-a-Sketch</a></p>
+
+</div>
+
+<footer style="background-color: var(--tf-page-bg-color)" class="navbar navbar-expand ">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

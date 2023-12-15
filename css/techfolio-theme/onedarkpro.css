@@ -1,0 +1,98 @@
+/* VSCode One Dark Pro theme adaptation */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700|Source+Code+Pro:300,400,500,700");
+
+:root {
+  --background: #282c34;
+  --foreground: #D3D3D3;
+  --comment: #5c6370;
+  --keyword: #c678dd;
+  --string: #98c379;
+  --number: #d19a66;
+  --function: #61afef;
+  --variable: #e06c75;
+  --tf-pill-bg: #61afef;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--keyword);
+}
+
+.tf-social {
+  display: inline-block;
+  fill: var(--keyword);
+  height: 1.5em; 
+  vertical-align: -.1em;
+  width: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--string);
+}
+
+a.md:hover {
+  color: var(--string);
+  opacity: 0.7;
+}
+
+a span {
+  color: var(--number);
+}
+a span:hover {
+  color: var(--foreground);
+}
+
+a.nav-link {
+  color: var(--comment);
+}
+
+div.card {
+  background-color: var(--background);
+  box-shadow: 3px 6px 10px var(--background);
+}
+
+a.btn {
+  border: 1px solid var(--function); 
+  color: var(--function);
+}
+a.btn:hover {
+  color: var(--variable);
+}
+
+pre.highlight {
+  background-color: var(--background);
+}
+
+.highlight span.kd {
+   color: #c678dd; 
+}
+.highlight span.nx {
+  color: #61afef;
+}
+
+.highlight span.k {
+  color: #c678dd;
+}
+.highlight span.sl {
+  color: #98c379;
+}
+.hightlight span.p {
+  color: #c678dd;
+}
+.highlight span.nt {
+  color: #ff6b6b;
+}
+.text-muted float-end {
+  color: var(--foreground);
+}
+
+.card-footer {
+  background-color: var(--background);
+  border-top: none;
+}
+

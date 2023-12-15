@@ -1,0 +1,76 @@
+{
+  "basics": {
+    "name": "Zachary Stoddard",
+    "label": "Student",
+    "picture": "https://github.com/Hcazzz.png",
+    "email": "zstoddar@hawaii.edu",
+    "phone": "808-326-2636",
+    "website": "https://Hcazzz.github.io",
+    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2025.",
+    "location": { "address": "", "postalCode": "96707", "city": "Kapolei", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "hcazzz", "url": "http://github.com/hcazzz" },
+      { "network": "linkedin", "username": "Zachary Stoddard", "url": "https://www.linkedin.com/in/zacharystoddard" }   
+    ]
+  },
+  "interests": [
+    { "name": "Software Engineering" },
+    { "name": "Web Development" },
+    { "name": "Quantum Computing" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [".Net", "JavaScript", "SQL", "Java", "Bootstrap", "React", "MongoDB" ]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "MacOS", "Git/GitHub", "g++", "Windows" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hawaii, Honolulu, HI",
+      "area": "Computer Science (expected May, 2025)",
+      "studyType": "B.S.",
+      "startDate": "2021-08-20",
+      "endDate": "Present",
+      "courses": [
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "Target",
+      "position": "Flex Fulfillment",
+      "website": "https://target.com",
+      "startDate": "2019-11-20",
+      "endDate": "2023-04-10",
+      "summary": "Picked, packed, and sorted store merchandise quickly and effectively and ensured a high quality experience for our store guests.",
+      "highlights": [
+        "Experience working customer service",
+        "Quick and efficient work"
+      ]
+    }
+
+  ],
+  
+  "volunteer": [
+    {
+      "organization": "Community Service",
+      "startDate": "2015-08-23",
+      "endDate": "2020-03-01",
+      "summary": "Community Service around Hawaii with various organizations including the Kroc Center and JROTC",
+      "highlights": [
+        "Making the environment a better place for the people of Hawaii",
+        "Collaborating as a team to collectively improve our environment."
+      ]
+    }
+
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}

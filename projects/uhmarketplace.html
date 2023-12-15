@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="UH Marketplace | Zachary Stoddard | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/Hcazzz.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zachary Stoddard | Professional Portfolio">
+    <meta property="og:url" content="https://hcazzz.github.io//projects/uhmarketplace.html">
+    <meta property="og:title" content="UH Marketplace | Zachary Stoddard | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/Hcazzz.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/onedarkpro.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>UH Marketplace | Zachary Stoddard | Professional Portfolio</title>
+  </head>
+  <body>
+  <header style="background-color: #282c34" class="navbar navbar-expand bg-gradient py-3 ">
+  <div class="container-fluid">
+    <a style="color: var(--keyword)" class="navbar-brand" href="/">Zachary Stoddard</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a style="color: var(--keyword)" class="nav-link" href="/#projects">Projects</a>
+        <a style="color: var(--keyword)" class="nav-link" href="/#essays">Essays</a>
+        <a style="color: var(--keyword)" class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">UH Marketplace</h1>
+ <div class="text-center p-4">
+  <img width="auto" height="300" src="../img/uhmarket.png" class="img-thumbnail" />
+</div>
+
+<p><a href="https://the-manoa-marketplace.github.io/uh-marketplace.github.io/">UH Marketplace</a> was the final project I helped create in <a href="https://courses.ics.hawaii.edu/ics314f23/">ICS 314</a>. I worked with 4 others to create this project, which allows people from the University of Hawaii system to create an account and buy and sell items.</p>
+
+<p>The project was created using Meteor, MongoDB, React, and Bootstrap. We used Meteor to create the application, MongoDB to store the data, React to create the front end, and Bootstrap to make the website look nice. The project used agile project management to create deliverables and milestones. We used GitHub projects to create milestones and issues to work on. We used ESLint to enforce coding standards and used GitHub to store our code.</p>
+
+<p>The most notable things I worked on in this project is the create and edit listing pages, and the database scheme. The create listing page was created using react-bootstrap forms and allows the user to add images, which was the hardest part. Here is an example of the add listing page.</p>
+
+<div class="text-center p-4">
+  <img width="500px" height="500px" src="../img/addlisting.png" class="img-thumbnail" />
+</div>
+
+<p>The add listing page allows the user to multiple images and delete them. In order to add images and retrieve them from the database I had to utilize cloudinary to store the images and retrieve them. I also had to create a database scheme to store the images in the database. Here is the code that handled uploading images to the cloudinary endpoint. This code can be found at <a href="https://github.com/the-manoa-marketplace/the-real-manoa-marketplace/blob/main/app/imports/ui/services/CloudinaryUpload.js">CloudinaryUpload.js</a>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">axios</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">axios</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">postImage</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">imagefile</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">formData</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">();</span>
+    <span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">'</span><span class="s1">file</span><span class="dl">'</span><span class="p">,</span> <span class="nx">imagefile</span><span class="p">);</span>
+    <span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">'</span><span class="s1">upload_preset</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">PRESET</span><span class="dl">'</span><span class="p">);</span>
+
+    <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.cloudinary.com/v1_1/KEY/image/upload</span><span class="dl">'</span><span class="p">,</span> <span class="nx">formData</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">secure_url</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">data from postImage():</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">data</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span> <span class="nx">postImage</span> <span class="p">};</span>
+</code></pre></div></div>
+
+<p>It was quite difficult to come to this point as I had to learn how to use cloudinary to upload images. In order to correctly do create the page I had to make sure the user could see the images they upload and they were able to delete them. As I had to deal with state I used the React useState to do this. In this code block it shows the handleImageDelete function which deletes the image from the state and the handleImagePreview function which adds the image to the state, it also shows the submit function which uploads the images to the cloudinary endpoint and stores the url in the database.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">AddListing</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">imagesSelected</span><span class="p">,</span> <span class="nx">setImagesSelected</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+  <span class="kd">const</span> <span class="nx">handleImageDelete</span> <span class="o">=</span> <span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setImagesSelected</span><span class="p">(</span><span class="nx">imagesSelected</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">i</span> <span class="o">!==</span> <span class="nx">index</span><span class="p">));</span>
+  <span class="p">};</span>
+
+  <span class="kd">const</span> <span class="nx">handleImagePreview</span> <span class="o">=</span> <span class="p">(</span><span class="nx">selectedFiles</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setImagesSelected</span><span class="p">(</span><span class="nx">selectedFiles</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="kd">const</span> <span class="nx">submit</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">listingTitle</span><span class="p">,</span> <span class="nx">price</span><span class="p">,</span> <span class="nx">condition</span><span class="p">,</span> <span class="nx">description</span><span class="p">,</span> <span class="nx">tags</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">images</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">imagesSelected</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">images</span> <span class="o">=</span> <span class="k">await</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span>
+        <span class="nx">imagesSelected</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">image</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">CloudinaryUpload</span><span class="p">.</span><span class="nx">postImage</span><span class="p">(</span><span class="nx">image</span><span class="p">)),</span>
+      <span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">const</span> <span class="nx">owner</span> <span class="o">=</span> <span class="nx">Meteor</span><span class="p">.</span><span class="nx">user</span><span class="p">().</span><span class="nx">username</span><span class="p">;</span>
+</code></pre></div></div>
+<p>If you want to see the full code for the add listing page you can do so here <a href="https://github.com/the-manoa-marketplace/the-real-manoa-marketplace/blob/main/app/imports/ui/pages/AddListing.jsx">AddListing.jsx</a>.</p>
+
+<p>It was also important to only upload images to the cloudinary endpoint when the user submits the form. This was done by using the submit function which is called when the user clicks the submit button. This was important as it would be a waste of resources to upload images to the cloudinary endpoint if the user decides to not submit the form.</p>
+
+<p>The edit listing page was created in a similar manner, but I had to be able to retrieve the images from the database and display them. Here is an example of the edit listing page.</p>
+
+<div class="text-center p-4">
+  <img width="500px" height="500px" src="../img/editlisting.png" class="img-thumbnail" />
+</div>
+
+<p>Here is a small code block I used to display the images from the database.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">images</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">url</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+    <span class="nx">div</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Image</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">url</span><span class="p">}</span> <span class="nx">thumbnail</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nx">handleImageDelete</span><span class="p">(</span><span class="nx">index</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Delete</span><span class="o">&lt;</span><span class="sr">/Button</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="p">))}</span>
+</code></pre></div></div>
+
+<p>The images were retrieved from this segment of code, if the listing had no images then no images would be displayed however the user was still free to add images to the listing.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">const</span> <span class="nb">document</span> <span class="o">=</span> <span class="nx">Listings</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span><span class="nx">_id</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">doc</span><span class="p">:</span> <span class="nb">document</span><span class="p">,</span>
+      <span class="na">ready</span><span class="p">:</span> <span class="nx">rdy</span><span class="p">,</span>
+    <span class="p">};</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">_id</span><span class="p">]);</span>
+
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">images</span><span class="p">,</span> <span class="nx">setImages</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">images</span> <span class="o">||</span> <span class="p">[]);</span>
+</code></pre></div></div>
+<p>If you want to see the full code for the edit listing page you can do so here <a href="https://github.com/the-manoa-marketplace/the-real-manoa-marketplace/blob/main/app/imports/ui/pages/EditListing.jsx">EditListing.jsx</a>.</p>
+
+<p>Besides the create and edit listing pages, I also worked on the database scheme. I created the database scheme using the SimpleSchema package. Here is an example of the database scheme I created. The code can be found here <a href="https://github.com/the-manoa-marketplace/the-real-manoa-marketplace/blob/main/app/imports/api/listing/Listing.js">Listing.js</a>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Mongo</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">meteor/mongo</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">SimpleSchema</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">simpl-schema</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The ListingsCollection. It encapsulates state and variable values for listing.
+ */</span>
+<span class="kd">class</span> <span class="nx">ListingsCollection</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// The name of this collection.</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">ListingsCollection</span><span class="dl">'</span><span class="p">;</span>
+    <span class="c1">// Define the Mongo collection.</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">collection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Mongo</span><span class="p">.</span><span class="nx">Collection</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+    <span class="c1">// Define the structure of each document in the collection.</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">schema</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SimpleSchema</span><span class="p">({</span>
+      <span class="na">listingTitle</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+      <span class="na">price</span><span class="p">:</span> <span class="nb">Number</span><span class="p">,</span>
+      <span class="na">owner</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+      <span class="na">description</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+      <span class="na">condition</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">type</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+        <span class="na">allowedValues</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">Factory New</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Like New</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Fair</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Field-Tested</span><span class="dl">'</span><span class="p">],</span>
+      <span class="p">},</span>
+      <span class="na">tags</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">type</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+        <span class="na">allowedValues</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">Apparel</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Housewares</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Vehicle</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Electronics</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Games</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Other</span><span class="dl">'</span><span class="p">],</span>
+      <span class="p">},</span>
+      <span class="na">images</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">type</span><span class="p">:</span> <span class="nb">Array</span><span class="p">,</span>
+        <span class="na">optional</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="dl">'</span><span class="s1">images.$</span><span class="dl">'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">type</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+        <span class="na">optional</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">});</span>
+    <span class="c1">// Attach the schema to the collection, so all attempts to insert a document are checked against schema.</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">attachSchema</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">schema</span><span class="p">);</span>
+    <span class="c1">// Define names for publications and subscriptions</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">userPublicationName</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">.publication.user`</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">adminPublicationName</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">.publication.admin`</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">listingPublicationName</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">.publication.listing`</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+ * The singleton instance of the StuffsCollection.
+ * @type {ListingsCollection}
+ */</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">Listings</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ListingsCollection</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>While this wasn’t very difficult to do, it was important to do it correctly as it would be used throughout the project. Besides these things I was also in charge of deploying the site to digital ocean and setting up the domain name. Other than that I played a role in helping my group members with whatever errors they may have had and making sure all ESLint errors that weren’t fixed were fixed.</p>
+
+<p>Once again if you’d like to visit our project you can do so here <a href="https://the-manoa-marketplace.github.io/uh-marketplace.github.io/">UH Marketplace</a>.</p>
+
+</div>
+
+<footer style="background-color: var(--tf-page-bg-color)" class="navbar navbar-expand ">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
